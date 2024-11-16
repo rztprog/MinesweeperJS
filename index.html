@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minesweeper</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <link rel="stylesheet" href="minesweeper.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="partie.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="title">
+    <h1>Minesweeper JS</h1>
+    <img src="img/mine.png" alt="mine">
+  </div>
+  <form class="form">
+    <div>
+      <label class="form-label" for="size">Size</label>
+      <input type="number" class="form-control" name="size" id="size" value=5 min="5" max="20">
+    </div>
+    <div>
+      <label class="form-label" for="difficulty">Difficulty</label>
+      <input type="number" class="form-control" name="difficulty" id="difficulty" value=2 placeholder="2" min="1" max="3">    
+    </div>
+    <div>
+      <label class="form-label" for="difficulty">Cheat</label>
+      <input type="checkbox" class="form-control" name="cheat" id="cheat">    
+    </div>
+  </div>
+    <button type="submit" class="button" disabled>
+      Please choose grid size
+    </button>
+  </form>
+
+  <div class="status hide">
+    <p>*</p>
+  </div>
+  <div class="partie hide">
+    <h2 class="partie-title">Dashboard</h2>
+    <span class="timer">
+      <p>Timer:</p>
+      <p>00:00</p>
+    </span>
+    <span class="difficulty">
+      <p>Difficulty:</p>
+      <p>*</p>
+    </span>
+    <span class="mines">
+      <p>Mines left:</p>
+      <p>*</p>
+    </span>
+    <span class="left">
+      <p>Remaining open tiles:</p>
+      <p>*</p>
+    </span>
+    <span class="cheat hide">
+      <p>Cheat (CTRL Key)</p>
+    </span>
+  </div>
+  <table class="table hide">
+    <tbody id="minesweeper">
+    </tbody>
+  </table>
+
+  <!-- Including your code -->
+  <script type="module" src="./lib/minesweeper.js"></script>
+</body>
+</html>

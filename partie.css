@@ -1,0 +1,55 @@
+.partie,
+.status {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #999;
+    padding: 20px 50px;
+}
+
+.partie * {
+    margin: 0;
+}
+
+.status{
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status p {
+    margin: 0;
+}
+
+.timer,
+.mines,
+.left,
+.difficulty {
+    display: flex;
+}
+
+.timer > p:last-child,
+.mines > p:last-child,
+.left > p:last-child,
+.difficulty > p:last-child {
+    padding-left: 2px;
+    color: rgb(30, 255, 0);
+}
+
+.loose{
+    background-color: #be1515;
+    color: white;
+}
+
+.win{
+    background-color: #0de00d;
+}
+
+.red-error{
+    color: #f80000;
+}
+
+.cheat{
+    font-size: 0.8rem;
+}
